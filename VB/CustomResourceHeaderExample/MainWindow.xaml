@@ -1,0 +1,86 @@
+﻿<Window
+    x:Class="CustomResourceHeaderExample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduling"
+    xmlns:dxschv="http://schemas.devexpress.com/winfx/2008/xaml/scheduling/visual"
+    xmlns:local="clr-namespace:CustomResourceHeaderExample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:CustomResourceHeaderExample.ViewModels"
+    Width="600"
+    Height="400"
+    mc:Ignorable="d"
+    DataContext="{dxmvvm:ViewModelSource viewmodels:MainViewModel}"
+    Title="MainWindow">
+    
+    <!--region #ResourceHeaderControl-->
+    <Window.Resources>
+        <DataTemplate x:Key="resourceHeaderContentTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image
+                    MaxWidth="120"
+                    MaxHeight="120"
+                    HorizontalAlignment="Center"
+                    DockPanel.Dock="Top"
+                    RenderOptions.BitmapScalingMode="NearestNeighbor"
+                    Source="{Binding Resource.CustomFields.Photo}"
+                    Stretch="Uniform" />
+                <StackPanel Grid.Row="1">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontWeight="Bold"
+                        Text="{Binding Resource.Caption}" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <Style TargetType="dxschv:ResourceHeaderControl">
+            <Setter Property="ContentOrientation" Value="Horizontal" />
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+    </Window.Resources>
+    <!--endregion #ResourceHeaderControl-->
+    
+    <Grid>
+        <dxsch:SchedulerControl x:Name="scheduler" GroupType="Resource">
+            <dxsch:DayView
+                x:Name="dayView"
+                NavigationButtonsVisibility="Never"
+                ResourcesPerPage="5"
+                ShowAllDayArea="False"
+                ShowWorkTimeOnly="True"
+                SnapToCellsMode="Never"
+                TimeScale="00:10:00"
+                ResourceHeaderContentTemplate="{StaticResource resourceHeaderContentTemplate}"/>
+            <dxsch:TimelineView
+                x:Name="timelineView"
+                NavigationButtonsVisibility="Never"
+                ResourcesPerPage="5">
+                <dxsch:TimelineView.TimeScales>
+                    <dxsch:TimeScaleDay />
+                    <dxsch:TimeScaleWorkHour />
+                </dxsch:TimelineView.TimeScales>
+            </dxsch:TimelineView>
+            <!--region #Mappings-->
+            <dxsch:SchedulerControl.DataSource>
+                <dxsch:DataSource ResourcesSource="{Binding MainResources}">
+                    <dxsch:DataSource.ResourceMappings>
+                        <dxsch:ResourceMappings
+                            Caption="Name"
+                            Id="Id"
+                            Visible="IsVisible">
+                            <dxsch:CustomFieldMapping Mapping="ResourceImage" Name="Photo" />
+                        </dxsch:ResourceMappings>
+                    </dxsch:DataSource.ResourceMappings>
+                </dxsch:DataSource>
+            </dxsch:SchedulerControl.DataSource>
+            <!--endregion #Mappings-->
+        </dxsch:SchedulerControl>
+    </Grid>
+
+</Window>
