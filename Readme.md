@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MyResource.cs](./CS/CustomResourceHeaderExample/Data/MyResource.cs) (VB: [MyResource.vb](./VB/CustomResourceHeaderExample/Data/MyResource.vb))
+* [ResourceData.cs](./CS/CustomResourceHeaderExample/Data/ResourceData.cs) (VB: [ResourceData.vb](./VB/CustomResourceHeaderExample/Data/ResourceData.vb))
+* [MainWindow.xaml](./CS/CustomResourceHeaderExample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/CustomResourceHeaderExample/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/CustomResourceHeaderExample/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/CustomResourceHeaderExample/MainWindow.xaml))
+* [MainViewModel.cs](./CS/CustomResourceHeaderExample/ViewModels/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/CustomResourceHeaderExample/ViewModels/MainViewModel.vb))
+<!-- default file list end -->
 # How to customize resource headers to display custom text and images 
 
 
