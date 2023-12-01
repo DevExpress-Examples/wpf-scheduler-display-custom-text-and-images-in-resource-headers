@@ -3,20 +3,25 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T603619)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [MyResource.cs](./CS/CustomResourceHeaderExample/Data/MyResource.cs) (VB: [MyResource.vb](./VB/CustomResourceHeaderExample/Data/MyResource.vb))
+# WPF Scheduler - Display Custom Text and Images in Resource Headers
+
+This example uses the [SchedulerViewBase.ResourceHeaderContentTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Scheduling.SchedulerViewBase.ResourceHeaderContentTemplate) property to display images and text in resource headers. [Custom Fields](https://docs.devexpress.com/WPF/119962/controls-and-libraries/scheduler/data-binding/custom-fields) allow you to store data source images and bind template properties to them.
+
+![image](./media/56dddaff-fb22-4d7b-a86c-5aec44761374.png)
+
+## Files to Review
+
+* [MainWindow.xaml](./CS/CustomResourceHeaderExample/MainWindow.xaml)
 * [ResourceData.cs](./CS/CustomResourceHeaderExample/Data/ResourceData.cs) (VB: [ResourceData.vb](./VB/CustomResourceHeaderExample/Data/ResourceData.vb))
-* [MainWindow.xaml](./CS/CustomResourceHeaderExample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/CustomResourceHeaderExample/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/CustomResourceHeaderExample/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/CustomResourceHeaderExample/MainWindow.xaml.vb))
-* [MainViewModel.cs](./CS/CustomResourceHeaderExample/ViewModels/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/CustomResourceHeaderExample/ViewModels/MainViewModel.vb))
-<!-- default file list end -->
-# How to customize resource headers to display custom text and images 
 
+## Documentation
 
-To display an image or text in the resource header, create a custom template and assign it to the <a href="http://help.devexpress.com/#WPF/DevExpressXpfSchedulingViewBase_ResourceHeaderContentTemplatetopic">ViewBase.ResourceHeaderContentTemplate</a> property. <br>The <a href="http://help.devexpress.com/#WPF/clsDevExpressXpfSchedulingResourceItemtopic">ResourceItem</a> object has no property that contains an associated image, so use <a href="http://help.devexpress.com/#WPF/CustomDocument119962">custom fields</a> to obtain an image when necessary.<br>The resulting application is shown below.<br><img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-customize-resource-headers-to-display-custom-text-and-images-t603619/17.2.3+/media/56dddaff-fb22-4d7b-a86c-5aec44761374.png">
+* [Resources](https://docs.devexpress.com/WPF/119219/controls-and-libraries/scheduler/resources)
+* [SchedulerViewBase.ResourceHeaderContentTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Scheduling.SchedulerViewBase.ResourceHeaderContentTemplate)
 
-<br/>
+## More Examples
 
-
+* [WPF Scheduler - Disable Resource Colorization](https://github.com/DevExpress-Examples/wpf-scheduler-disable-resource-colorization)
+* [WPF Scheduler - Customize Cell Colors](https://github.com/DevExpress-Examples/wpf-scheduler-customize-cell-colors)
+* [WPF Scheduler - Add DateNavigator and ResourceTreeControl](https://github.com/DevExpress-Examples/how-to-use-scheduler-with-datenavigator-t544898)
