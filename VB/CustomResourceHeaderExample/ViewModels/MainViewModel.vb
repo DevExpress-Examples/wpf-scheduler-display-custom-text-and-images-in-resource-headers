@@ -1,17 +1,16 @@
-﻿Imports CustomResourceHeaderExample.Data
+Imports CustomResourceHeaderExample.Data
+Imports DevExpress.Mvvm
 Imports System.Collections.ObjectModel
 
 Namespace CustomResourceHeaderExample.ViewModels
-    Public Class MainViewModel
-        Private ReadOnly data As ResourceData
 
-        Protected Sub New()
-            data = New ResourceData()
+    Public Class MainViewModel
+        Inherits ViewModelBase
+
+        Public Sub New()
+            MainResources = ResourceData.CreateResources()
         End Sub
-        Public Overridable ReadOnly Property MainResources() As ObservableCollection(Of MyResource)
-            Get
-                Return data.Resources
-            End Get
-        End Property
+
+        Public ReadOnly Property MainResources As ObservableCollection(Of MyResource)
     End Class
 End Namespace
