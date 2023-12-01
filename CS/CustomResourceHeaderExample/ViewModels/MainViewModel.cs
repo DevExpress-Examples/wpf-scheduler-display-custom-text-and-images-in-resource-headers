@@ -1,16 +1,13 @@
 ﻿using CustomResourceHeaderExample.Data;
+using DevExpress.Mvvm;
 using System.Collections.ObjectModel;
 
-namespace CustomResourceHeaderExample.ViewModels
-{
-    public class MainViewModel
-    {
-        readonly ResourceData data;
+namespace CustomResourceHeaderExample.ViewModels {
+    public class MainViewModel : ViewModelBase {
 
-        protected MainViewModel()
-        {
-            data = new ResourceData();
+        public MainViewModel() {
+            MainResources = ResourceData.CreateResources();
         }
-        public virtual ObservableCollection<MyResource> MainResources { get { return data.Resources; } }
+        public ObservableCollection<MyResource> MainResources { get; }
     }
 }

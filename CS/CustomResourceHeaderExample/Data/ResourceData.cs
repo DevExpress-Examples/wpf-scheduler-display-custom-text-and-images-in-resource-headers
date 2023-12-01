@@ -2,19 +2,15 @@
 using System.Collections.ObjectModel;
 using System.Windows.Media.Imaging;
 
-namespace CustomResourceHeaderExample.Data
-{
-    public class ResourceData
-    {
-        public void CreateResources()
-        {
+namespace CustomResourceHeaderExample.Data {
+    public class ResourceData {
+        public static ObservableCollection<MyResource> CreateResources() {
             ObservableCollection<MyResource> allResources = new ObservableCollection<MyResource>();
             int resId = 0;
             string[] resNames = new string[] { "Lincoln Bartlett", "Amelia Harper", "Stu Pizaro", "Sandra Johnson", "Victor Norris" };
             int resCount = resNames.Length;
-            for (int i = 0; i < resCount; i++)
-            {
-                MyResource resource = MyResource.Create();
+            for (int i = 0; i < resCount; i++) {
+                MyResource resource = new MyResource();
                 resource.Id = resId++;
                 resource.Name = resNames[i];
                 resource.IsVisible = true;
@@ -23,14 +19,7 @@ namespace CustomResourceHeaderExample.Data
                 resource.ResourceImage.Freeze();
                 allResources.Add(resource);
             }
-            Resources = allResources;
-        }
-
-        public ObservableCollection<MyResource> Resources { get; private set; }
-
-        public ResourceData()
-        {
-            CreateResources();
+            return allResources;
         }
     }
 }
