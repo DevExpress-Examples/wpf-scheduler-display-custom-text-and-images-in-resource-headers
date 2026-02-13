@@ -27,7 +27,7 @@ This example uses the [SchedulerViewBase.ResourceHeaderContentTemplate](https://
 * [WPF Scheduler - Customize Cell Colors](https://github.com/DevExpress-Examples/wpf-scheduler-customize-cell-colors)
 * [WPF Scheduler - Add DateNavigator and ResourceTreeControl](https://github.com/DevExpress-Examples/how-to-use-scheduler-with-datenavigator-t544898)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-scheduler-display-custom-text-and-images-in-resource-headers&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-scheduler-display-custom-text-and-images-in-resource-headers&~~~was_helpful=no)
 
